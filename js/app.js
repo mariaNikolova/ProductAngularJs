@@ -37,5 +37,9 @@ app.config(function ($routeProvider) {
   .when('/addProduct', {
     templateUrl: 'templates/partial/addProduct.html'
     , controller: 'AddCtrl'
+  })
+  .when('/listProducts', {
+    templateUrl: 'templates/listProducts.html'
+    , controller: 'ListCtrl'
   });
  });

@@ -11,8 +11,8 @@ app.controller('AddCtrl',
         productSrvc.add(productData)
         .$promise
         .then(function (data) {
-            notifySrvc.showInfo("Add Phone successful!");
-            $location.path("/listProduct");
+            notifySrvc.showInfo("Add Product successful!");
+            $location.path("/listProducts");
           }, function (err) {
             notifySrvc.showError("Add Phone failed", err);
           });
