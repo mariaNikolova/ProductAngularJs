@@ -53,5 +53,12 @@ app.factory('authSrvc',
       ,isAnonymous : function() {
         return sessionStorage['currentUser'] == undefined;
       }
+      , isNormalUser : function() {
+        var currentUser = this.getCurrentUser();
+        return (currentUser != undefined) && (!currentUser.isAdmin);
+      }
+      , logout: function() {
+        delete sessionStorage['currentUser'];
+      }
     }
   });

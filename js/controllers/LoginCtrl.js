@@ -9,7 +9,7 @@ app.controller('LoginCtrl',
   	$scope.login = function (userData) {
   		authSrvc.login(userData, function (data) {
         notifySrvc.showInfo("Login successful!");
-        $location.path("/");
+        $location.path("/welcomeUser");
       }, function (err) {
         notifySrvc.showError("Login failed", err);
       });

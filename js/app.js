@@ -25,5 +25,13 @@ app.config(function ($routeProvider) {
   .when('/register', {
     templateUrl: 'templates/register.html'
     , controller: 'RegisterCtrl'
+  })
+  .when('/logout', {
+    templateUrl: 'templates/home.html'
+    , controller: 'AppCtrl'
+  })
+  .when('/welcomeUser', {
+    templateUrl: 'templates/partial/welcomeUser.html'
+    , controller: 'HomeCtrl'
   });
  });

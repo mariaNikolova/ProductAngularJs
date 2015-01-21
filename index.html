@@ -8,7 +8,8 @@
 
 <body>
 <header id="header">
-  <div ng-include="'templates/partial/header.html'"></div>
+  <div ng-include="'templates/partial/header.html'" ng-if="authSrvc.isAnonymous()"></div>
+  <div ng-include="'templates/partial/headerLoginUser.html'" ng-if="!authSrvc.isAnonymous()"></div>
 </header>
 
   
