@@ -7,7 +7,7 @@ var app = angular.module('app', [
 ]);
 
 app
-.constant('baseSrvcUrl', 'https://api.parse.com/')
+.constant('baseSrvcUrl', 'https://api.parse.com/1/')
 .constant('pageSize', 2)
 .constant('parseAppId', 'PJ23o3kax8LaRSfbslSrkxF1VdMHshRvM52622TB')
 .constant('parseRestApiKey', 'xevclGLfrpb01brFAzpMVNbJXVFfimYarqUSdq9H');

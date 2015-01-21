@@ -1,6 +1,6 @@
 'use strict';
 app.factory('authSrvc',
-  function ($http, $resource, baseSrvcUrl, parseAppId, parseRestApiKey) {
+  function ($http, $resource, $parse,baseSrvcUrl, parseAppId, parseRestApiKey) {
   	return{
       getCurrentUser : function() {
         if (sessionStorage['currentUser']) {
@@ -29,15 +29,15 @@ app.factory('authSrvc',
       ,register: function(userData, success, error) {
       	console.log(userData);
       	this.setAuthHeaders();
-        return $resource(baseSrvcUrl + '1/users', {
-            username:"@username"
+        return $resource(baseSrvcUrl + 'users', {
+            username: "@username" 
             ,password:"@password"
             ,confirmPassword:"@confirmPassword"
           }).save(userData);
       }
       , login: function(userData, success, error) {
           this.setAuthHeaders();
-          return $resource(baseSrvcUrl + '1/login', {
+          return $resource(baseSrvcUrl + 'login', {
             username:"@username"
             , password:"@password"
         }).get(userData)

@@ -3,9 +3,9 @@
                 <header class="main-header">Login</header>
                 <div class="data">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" placeholder="Username..."/>
+                    <input type="text" id="username" placeholder="Username..." ng-model="userData.username"/>
                     <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Password..."/>
+                    <input type="password" id="password" placeholder="Password..." ng-model="userData.password"/>
                 </div>
                 <div class="panel">
                     <button id="login-button" class="button" ng-click="login(userData)">Login</button>

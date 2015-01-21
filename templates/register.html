@@ -3,11 +3,11 @@
                 <header class="main-header">Register</header>
                 <div class="data">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" placeholder="Username..."/>
+                    <input type="text" id="username" placeholder="Username..." ng-model="userData.username"/>
                     <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Password..."/>
+                    <input type="password" id="password" placeholder="Password..." ng-model="userData.password"/>
                     <label for="confirm-password">Confirm password:</label>
-                    <input type="password" id="confirm-password" placeholder="Password again..."/>
+                    <input type="password" id="confirm-password" placeholder="Password again..." ng-model="userData.confirmPassword"/>
                 </div>
                 <div class="panel">
                     <button class="button" id="register-button" ng-click="register(userData)">Register</button>
