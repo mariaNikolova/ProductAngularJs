@@ -14,6 +14,17 @@ app.factory('productSrvc',
       }
       , getProduct: function(objectId) {
           return $resource(baseSrvcUrl + 'classes/Product' + ((objectId) ? "/" + objectId: "")).get();
-       },
-    }
+       }
+      , editProduct: function(objectId, productData){
+          return $resource(baseSrvcUrl + "classes/Product/" + objectId, {
+            name:"@name"
+             , category: "@category"
+             , price: "@price"
+            }, {
+              update: {
+                method: 'PUT'
+              }
+            }).update(productData);
+       }
+      }
   });

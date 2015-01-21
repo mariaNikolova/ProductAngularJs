@@ -41,5 +41,9 @@ app.config(function ($routeProvider) {
   .when('/listProducts', {
     templateUrl: 'templates/listProducts.html'
     , controller: 'ListCtrl'
+  })
+  .when('/editProduct/:objectId', {
+    templateUrl: 'templates/editProduct.html'
+    , controller: 'EditCtrl'
   });
  });
