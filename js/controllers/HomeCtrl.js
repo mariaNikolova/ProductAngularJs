@@ -2,7 +2,7 @@
 
 // The HomeCtrl holds the presentation logic for the home screen
 app.controller('HomeCtrl',
-  function ($scope, $rootScope, $location, authSrvc) {
+  function ($scope, $rootScope, $location, authSrvc, productSrvc) {
   	//var user = authSrvc.getCurrentUser();
   	//console.log(user);
   	//$scope.username = user.username;
@@ -16,4 +16,8 @@ app.controller('HomeCtrl',
   		$scope.username = user.username;
   		$scope.password = user.password;
   	}
+  	var product = productSrvc.getProduct();
+  	$scope.name = product.name;
+  	$scope.category = product.category;
+  	$scope.price = product.price;
 });

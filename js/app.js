@@ -33,5 +33,9 @@ app.config(function ($routeProvider) {
   .when('/welcomeUser', {
     templateUrl: 'templates/partial/welcomeUser.html'
     , controller: 'HomeCtrl'
+  })
+  .when('/addProduct', {
+    templateUrl: 'templates/partial/addProduct.html'
+    , controller: 'AddCtrl'
   });
  });
