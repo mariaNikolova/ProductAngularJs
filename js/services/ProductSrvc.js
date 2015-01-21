@@ -26,5 +26,8 @@ app.factory('productSrvc',
               }
             }).update(productData);
        }
+       ,getProductById: function(objectId){
+         return $resource(baseSrvcUrl + "classes/Product/" + objectId).get();
+       }
       }
   });

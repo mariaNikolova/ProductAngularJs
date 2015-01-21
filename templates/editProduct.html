@@ -3,14 +3,14 @@
                 <header class="main-header">Edit product</header>
                 <div class="data">
                     <label for="item-name">Name:</label>
-                    <input type="text" id="item-name" value="3 Windows" placeholder="Name..."/>
+                    <input type="text" id="item-name" value="3 Windows" placeholder="Name..." ng-model="productData.name"/>
                     <label for="category">Category:</label>
-                    <input type="text" id="category" value="Other" placeholder="Category..."/>
+                    <input type="text" id="category" value="Other" placeholder="Category..." ng-model="productData.category"/>
                     <label for="price">Price:</label>
-                    <input type="text" id="price" value="44.00" placeholder="0.00"/>
+                    <input type="text" id="price" value="44.00" placeholder="0.00" ng-model="productData.price"/>
                 </div>
                 <div class="panel">
-                    <button id="edit-product-button" class="button" ng-click="editProduct(productData)">Edit</button>
+                   <a href="#/editProduct/{{product.objectId}}"><button id="edit-product-button" class="button" ng-click="editProduct(productData)">Edit</button></a>
                     <a href="#">
                         <button class="button">Cancel</button>
                     </a>
